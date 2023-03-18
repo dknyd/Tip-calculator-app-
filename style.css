@@ -1,0 +1,184 @@
+:root{
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+
+/* ALL VIEWS */
+
+*{
+    font-family: 'Space Mono', monospace;
+}
+
+body{
+    min-height: 100vh;
+    background-image: url("images/logo.svg");
+    background-repeat: no-repeat;
+    background-position:top;
+    background-position-y: 12rem;
+    background-color: var(--Light-grayish-cyan);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerMain{
+    display: flex;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+.containerTop{
+    color: var(--Dark-grayish-cyan);
+}
+
+.containerBill, .containerNumberOfPeople{height: 76px;}
+
+.buttonPercent{
+    background-color: var(--Very-dark-cyan);
+    border: none;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.buttonPercent:hover{
+    cursor: pointer;
+    background-color: var(--Strong-cyan);
+}
+
+
+
+.buttonPercent:active, .buttonPercent:focus{
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+#buttonCustom{
+    color: var(--Dark-grayish-cyan);
+    border-radius: 0.5rem;
+    height: 2.5rem;
+    border: none;
+    font-size: 1.5rem;
+	width: 101.33px;
+    text-align: right;
+    padding-right: 0.5rem;
+}
+
+#buttonCustom:hover{
+    cursor: pointer;
+}
+
+.containerBottom{
+    background-color: var(--Very-dark-cyan);
+    border-radius: 1rem;
+    padding: 2rem 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputField{
+    height: 1rem;
+    width: 94%;
+    border-radius: 0.5rem;
+    padding:10px;
+	font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
+    border: none;
+    background-color: var(--Very-light-grayish-cyan);
+    color: var(--Very-dark-cyan);
+    direction: rtl;
+    font-family: 'Space Mono', monospace;
+    font-size: 1.5rem;
+}
+
+#inputBill{
+    background-image: url(images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+#inputPeople{
+    background-image: url(images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.containerPercentage{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 0.5rem;
+}
+
+.tip, .total{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#tipAmount, #totalAmount{
+    grid-area: 1/1/2/2;
+    color: white;
+}
+
+#tipAmountPP, #totalAmountPP{
+    grid-area: 2/1/3/2;
+    color: var(--Grayish-cyan)
+}
+
+#tipPlaceholder, #totalPlaceholder{
+    color: var(--Strong-cyan);
+    grid-area: 1/2/3/3;
+    font-size: 3rem;
+}
+
+#buttonReset{
+    background-color: hsl(183, 100%, 20%);
+    color: var(--Very-dark-cyan);
+    border: 0px;
+    margin-top: auto;
+    height: 3rem;
+    border-radius: 0.5rem;
+}
+
+#buttonReset:hover{
+    cursor: pointer;
+    background-color: var(--Very-light-grayish-cyan);
+}
+
+/* DESKTOP VIEW */
+@media screen and (min-width: 600px) {
+    .containerMain{
+        flex-direction: row;
+    }
+
+    .containerTop{
+        margin-right: 2rem;
+    }
+}
+    
+
+/* MOBILE VIEW */
+@media screen and (max-width: 600px) {
+    body{
+        background-position-y: 1rem;
+    }
+
+    .containerMain{
+        flex-direction: column;
+        width: 20rem;
+        margin-top: 8rem;
+    }
+
+    .containerBottom{
+        margin-top: 1rem;
+    }
+
+    
+}

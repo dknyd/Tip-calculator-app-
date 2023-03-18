@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <title>Tip calculator app</title>
+</head>
+<body>
+    <form class="containerMain">
+        <div class="containerTop">
+            <div class="containerBill">
+                <p>Bill</p> 
+                <input class="inputField" type="text" name="" id="inputBill" placeholder="0">
+            </div>
+            <div class="containerTipSelection">
+                <p>Select Tip %</p>   
+                <div class="containerPercentage">
+                    <input type="button" value="5%" class="buttonPercent"></input>
+					<input type="button" value="10%" class="buttonPercent"></input>
+                    <input type="button" value="15%" class="buttonPercent"></input>
+                    <input type="button" value="25%" class="buttonPercent"></input>
+                    <input type="button" value="50%" class="buttonPercent"></input>
+                    <input type="text" id="buttonCustom" placeholder="Custom"> 
+                </div>
+            </div>
+            <div class="containerNumberOfPeople">
+            <p>Number of People</p> 
+            <input class="inputField" type="text" name="" id="inputPeople" placeholder="0">
+        
+            </div>
+        </div>  
+        <div class="containerBottom">
+            <div class="tip">
+               <span id="tipAmount">Tip Amount</span> 
+               <span id="tipAmountPP"> / person</span>
+               <span id="tipPlaceholder">$0.00</span>
+            </div>
+            <div class="total">
+                <span id="totalAmount">Total</span> 
+                <span id="totalAmountPP"> / person</span>
+                <span id="totalPlaceholder">$0.00</span>
+            </div>
+            <button id="buttonReset" type="reset">RESET</button>
+        </div>
+    </form>
+<script src="script.js"></script>
+<script src="https://kit.fontawesome.com/1761408963.js" crossorigin="anonymous"></script>
+</body>
+</html>
